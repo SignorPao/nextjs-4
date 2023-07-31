@@ -65,7 +65,7 @@ const PizzaDetails = ({ pizza }) => {
       </div>
 
       {/* details */}
-      <div className="bg-green-300 flex flex-col flex-1">
+      <div className="flex flex-col flex-1">
         <div className="flex-1 p-2 text-center lg:text-left">
           <div className="flex-1 bg-white overflow-y-scroll h-[40vh] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-white pr-2">
             {/* name */}
@@ -73,21 +73,21 @@ const PizzaDetails = ({ pizza }) => {
               <h2 className="capitalize text-xl lg:text-3xl mb-1">
                 {pizza.name}
               </h2>
-              <div className="bg-yellow-300 mb-6 text-lg font-medium">
+              <div className="mb-6 text-lg font-medium">
                 <span>
                   {size === "small"
                     ? "25 cm"
                     : size === "medium"
                     ? "30 cm"
                     : size === "large"
-                    ? "35cm"
+                    ? "35 cm"
                     : null}
                 </span>
                 <span>, {crust} crust</span>
               </div>
             </div>
             {/* size */}
-            <SizeSelection />
+            <SizeSelection pizza={pizza} size={size} setSize={setSize} />
             {/* crust */}
             <CrustSelection />
             {/* topping */}
