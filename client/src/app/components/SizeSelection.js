@@ -9,7 +9,11 @@ const SizeSelection = ({ pizza, size, setSize }) => {
       {/* sizes */}
       <div className="flex gap-x-12 items-baseline mb-10 font-medium">
         {/* small */}
-        <label className="flex flex-col items-center gap-x-2 cursor-pointer">
+        <label
+          className={`${
+            size === "small" ? "font-bold text-orange" : null
+          } flex flex-col items-center gap-x-2 cursor-pointer`}
+        >
           <Image
             width={60}
             height={60}
@@ -32,7 +36,9 @@ const SizeSelection = ({ pizza, size, setSize }) => {
           Small
         </label>
         {/* medium */}
-        <label className="flex flex-col items-center gap-x-2 cursor-pointer">
+        <label className={`${
+            size === "medium" ? "font-bold text-orange" : null
+          } flex flex-col items-center gap-x-2 cursor-pointer`}>
           <Image
             width={70}
             height={70}
@@ -55,7 +61,9 @@ const SizeSelection = ({ pizza, size, setSize }) => {
           Medium
         </label>
         {/* large */}
-        <label className="flex flex-col items-center gap-x-2 cursor-pointer">
+        <label className={`${
+            size === "large" ? "font-bold text-orange" : null
+          } flex flex-col items-center gap-x-2 cursor-pointer`}>
           <Image
             width={80}
             height={80}
