@@ -2,8 +2,6 @@
 import Image from "next/image";
 
 const SizeSelection = ({ pizza, size, setSize }) => {
-  console.log(pizza);
-
   return (
     <div className="mx-auto max-w-sm lg:max-w-none flex items-center justify-center lg:justify-start">
       {/* sizes */}
@@ -23,7 +21,7 @@ const SizeSelection = ({ pizza, size, setSize }) => {
               size === "small"
                 ? "border-2 border-orange p-[2px] rounded-full"
                 : "border-transparent filter saturate-[0.1]"
-            }`}
+            } mb-1`}
           />
           <input
             type="radio"
@@ -48,7 +46,7 @@ const SizeSelection = ({ pizza, size, setSize }) => {
               size === "medium"
                 ? "border-2 border-orange p-[2px] rounded-full"
                 : "border-transparent filter saturate-[0.1]"
-            }`}
+            } mb-1`}
           />
           <input
             type="radio"
@@ -73,7 +71,7 @@ const SizeSelection = ({ pizza, size, setSize }) => {
               size === "large"
                 ? "border-2 border-orange p-[2px] rounded-full"
                 : "border-transparent filter saturate-[0.1]"
-            }`}
+            } mb-1`}
           />
           <input
             type="radio"
