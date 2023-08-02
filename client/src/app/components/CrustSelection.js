@@ -15,7 +15,7 @@ const CrustSelection = ({ crust, setCrust }) => {
             value="traditional"
             checked={crust === "traditional"}
             onChange={(e) => setCrust(e.target.value)}
-            className="appearance-none w-4 h-4 border border-gray-400 rounded-full checked:bg-gradient-to-r checked:from-primary checked:to-secondary checked:border-secondary cursor-pointer"
+            className="appearance-none w-4 h-4 border rounded-full checked:bg-gradient-to-r checked:from-primary checked:to-secondary checked:border-secondary cursor-pointer"
           />
           Traditional
         </label>
