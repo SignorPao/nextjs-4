@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // image
 import Image from "next/image";
@@ -34,6 +34,13 @@ const Pizza = ({ pizza }) => {
   const closeModal = () => {
     setModal(false);
   };
+
+  // remove body scroll when modal is open
+  useEffect(() => {
+    modal
+      ? document.body.classList.add("overflow-y-hidden")
+      : document.body.classList.remove("overflow-y-hidden");
+  }, [modal]);
 
   return (
     <div className="group py-2 px-4 xl:py-4 xl:px-2 rounded-xl">
@@ -84,7 +91,7 @@ const Pizza = ({ pizza }) => {
           style={modalStyles}
           onRequestClose={closeModal}
           contentLabel="Pizza modal"
-          className="bg-white w-full h-full lg:max-w-[900px] lg:max-h-[600px] lg:rounded-3xl lg:fixed lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] outline-none"
+          className="bg-white w-full h-full lg:max-w-[60vw] lg:max-h-[70vh] lg:rounded-3xl lg:fixed lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] outline-none"
         >
           {/* close modal */}
           <div

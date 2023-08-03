@@ -67,7 +67,7 @@ const PizzaDetails = ({ pizza }) => {
       {/* details */}
       <div className="flex flex-col flex-1">
         <div className="flex-1 p-2 text-center lg:text-left">
-          <div className="flex-1 bg-white overflow-y-scroll h-[40vh] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-white pr-2">
+          <div className="flex-1 bg-white overflow-y-scroll h-[50vh] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-white pr-2">
             {/* name */}
             <div className="font-semibold">
               <h2 className="capitalize text-xl lg:text-3xl mb-1">
