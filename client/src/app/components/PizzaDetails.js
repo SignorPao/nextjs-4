@@ -70,7 +70,7 @@ const PizzaDetails = ({ pizza }) => {
           <div className="flex-1 bg-white overflow-y-scroll h-[50vh] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-white pr-2">
             {/* name */}
             <div className="font-semibold">
-              <h2 className="capitalize text-xl lg:text-3xl mb-1">
+              <h2 className="capitalize text-2xl lg:text-3xl mb-1">
                 {pizza.name}
               </h2>
               <div className="mb-6 text-lg font-medium">

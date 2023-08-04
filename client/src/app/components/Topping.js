@@ -46,7 +46,7 @@ const Topping = ({ top, topping, setTopping }) => {
         className="mb-2"
       />
       {/* topping name */}
-      <div className="text-sm capitalize text-center font-medium">
+      <div className={`${isChecked ? 'text-orange font-semibold' : 'text-black'} text-sm capitalize text-center font-medium`}>
         {top.name}
       </div>
       {/* checkbox */}
