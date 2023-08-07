@@ -5,6 +5,9 @@ import "./globals.css";
 import Nav from "./components/Nav";
 import CartMobileIcon from "./components/CartMobileIcon";
 
+// context
+import CartProvider from "./context/CartContext";
+
 // fonts
 import { Bangers, Quicksand, Roboto_Condensed } from "next/font/google";
 
@@ -32,17 +35,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.png" />
-      </head>
-      <body
-        className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable} font-quicksand`}
-      >
-        <Nav />
-        <CartMobileIcon />
-        {children}
-      </body>
-    </html>
+    <CartProvider>
+      <html lang="en">
+        <head>
+          <link rel="icon" href="/favicon.png" />
+        </head>
+        <body
+          className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable} font-quicksand`}
+        >
+          <Nav />
+          <CartMobileIcon />
+          {children}
+        </body>
+      </html>
+    </CartProvider>
   );
 }
