@@ -4,6 +4,7 @@ import "./globals.css";
 // components
 import Nav from "./components/Nav";
 import CartMobileIcon from "./components/CartMobileIcon";
+import CartMobile from "./components/CartMobile";
 
 // context
 import CartProvider from "./context/CartContext";
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
         >
           <Nav />
           <CartMobileIcon />
+          <CartMobile />
           {children}
         </body>
       </html>

@@ -1,10 +1,11 @@
 "use client";
 
+// context
 import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 // icons
 import { BsHandbagFill } from "react-icons/bs";
-import { CartContext } from "../context/CartContext";
 
 const CartMobileIcon = () => {
   const { isOpen, setIsOpen } = useContext(CartContext);
