@@ -6,6 +6,7 @@ import { CartContext } from "../context/CartContext";
 
 // components
 import CartTop from "./CartTop";
+import CartBottom from "./CartBottom";
 
 const CartMobile = () => {
   const { isOpen } = useContext(CartContext);
@@ -16,7 +17,12 @@ const CartMobile = () => {
         isOpen ? "bottom-0" : "-bottom-full"
       } fixed w-full h-full z-20 transition-all duration-300 lg:hidden flex flex-col bg-white`}
     >
+      {/* top */}
       <CartTop />
+      {/* cart items */}
+      <div>cart items</div>
+      {/* cart bottom */}
+      <CartBottom />
     </div>
   );
 };
