@@ -7,9 +7,10 @@ import { CartContext } from "../context/CartContext";
 // components
 import CartTop from "./CartTop";
 import CartBottom from "./CartBottom";
+import CartItem from "./CartItem";
 
 const CartMobile = () => {
-  const { isOpen } = useContext(CartContext);
+  const { isOpen, cart } = useContext(CartContext);
 
   return (
     <div
@@ -20,7 +21,11 @@ const CartMobile = () => {
       {/* top */}
       <CartTop />
       {/* cart items */}
-      <div>cart items</div>
+      <div>
+        {cart?.map((pizza, index) => {
+          return <CartItem pizza={pizza} key={index} />;
+        })}
+      </div>
       {/* cart bottom */}
       <CartBottom />
     </div>
