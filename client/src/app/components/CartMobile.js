@@ -21,7 +21,13 @@ const CartMobile = () => {
       {/* top */}
       <CartTop />
       {/* cart items */}
-      <div>
+      <div
+        className={`px-4 flex flex-col gap-y-4 py-2 mr-4 mt-8 h-[60vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-secondary ${
+          cart.length >= 3
+            ? "scrollbar-track-white/10"
+            : "scrollbar-track-transparent"
+        }`}
+      >
         {cart?.map((pizza, index) => {
           return <CartItem pizza={pizza} key={index} />;
         })}

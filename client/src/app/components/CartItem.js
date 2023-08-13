@@ -19,9 +19,9 @@ const CartItem = ({ pizza }) => {
           <div className="text-lg capitalize font-bold">{pizza.name}</div>
           <div className="flex flex-col gap-y-1">
             {/* crust */}
-            <div>{pizza.crust} crust</div>
+            <div className="capitalize font-medium text-[15px]">{pizza.crust} crust</div>
             {/* size */}
-            <div>{pizza.size} size</div>
+            <div className="capitalize mb-2 font-medium text-[15px]">{pizza.size} size</div>
             {/* quantity */}
             <div className="flex items-center gap-x-1">
               <div className="w-[28px] h-[28px] text-white gradient rounded-full flex items-center justify-center cursor-pointer">
@@ -45,10 +45,13 @@ const CartItem = ({ pizza }) => {
           </div>
           {/* price */}
           <div>
-            <span>$ {parseFloat(pizza.price * pizza.amount).toFixed(2)}</span>
+            <span className="text-[17px] font-medium font-robotoCondensed">$ {parseFloat(pizza.price * pizza.amount).toFixed(2)}</span>
           </div>
         </div>
       </div>
+
+      {/* toppings */}
+      <div>toppings</div>
     </div>
   );
 };
