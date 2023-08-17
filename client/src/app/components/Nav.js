@@ -1,10 +1,19 @@
+"use client";
+
+import { useContext } from "react";
+
 // image
 import Image from "next/image";
 
 // link
 import Link from "next/link";
 
+// context
+import { CartContext } from "../context/CartContext";
+
 const Nav = () => {
+  const { isOpen, setIsOpen } = useContext(CartContext);
+
   return (
     <nav className="absolute w-full py-8">
       <div className="container mx-auto flex flex-col lg:flex-row gap-y-3 justify-between items-center">
@@ -27,7 +36,10 @@ const Nav = () => {
             </div>
           </div>
           {/* cart */}
-          <div className="relative cursor-pointer hidden lg:flex">
+          <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="relative cursor-pointer hidden lg:flex"
+          >
             <Image width={38} height={38} src={"bag.svg"} alt="cart" />
             {/* amount */}
             <div className="bg-tertiary w-6 h-6 rounded-full text-white flex items-center justify-center text-[13px] font-robotoCondensed absolute -bottom-2 -right-1">
