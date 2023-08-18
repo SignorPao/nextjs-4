@@ -16,6 +16,7 @@ const CartProvider = ({ children }) => {
   const addToCart = (id, image, name, price, topping, size, crust) => {
     // sort topping array by name
     topping.sort((a, b) => a.name.localeCompare(b.name));
+
     const newItem = {
       id,
       image,
@@ -26,13 +27,77 @@ const CartProvider = ({ children }) => {
       crust,
       amount: 1,
     };
-    setCart([...cart, newItem]);
+
+    const cartItemIndex = cart.findIndex(
+      (item) =>
+        item.id === id &&
+        item.price === price &&
+        item.size === size &&
+        JSON.stringify(item.topping) === JSON.stringify(topping) &&
+        item.crust === crust
+    );
+
+    if (cartItemIndex === -1) {
+      setCart([...cart, newItem]);
+    } else {
+      const newCart = [...cart];
+      newCart[cartItemIndex].amount += 1;
+      setCart(newCart);
+    }
+
+    // setIsOpen(true);
   };
 
-  console.log(cart);
+  // remove from cart
+  const removeFromCart = (id, price, crust) => {
+    const itemIndex = cart.findIndex(
+      (item) => item.id === id && item.price === price && item.crust === crust
+    );
+    if (itemIndex !== -1) {
+      const newCart = [...cart];
+      newCart.splice(itemIndex, 1);
+      setCart(newCart);
+    }
+  };
+
+  // increase amount
+  const increaseAmount = (id, price) => {
+    const itemIndex = cart.findIndex(
+      (item) => item.id === id && item.price === price
+    );
+    if (itemIndex !== -1) {
+      const newCart = [...cart];
+      newCart[itemIndex].amount += 1;
+      setCart(newCart);
+    }
+  };
+
+  // decrease amount
+  const decreaseAmount = (id, price) => {
+    const itemIndex = cart.findIndex(
+      (item) => item.id === id && item.price === price
+    );
+    if (itemIndex !== -1) {
+      const newCart = [...cart];
+      if (newCart[itemIndex].amount > 1) {
+        newCart[itemIndex].amount -= 1;
+      }
+      setCart(newCart);
+    }
+  };
 
   return (
-    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart }}>
+    <CartContext.Provider
+      value={{
+        isOpen,
+        setIsOpen,
+        addToCart,
+        cart,
+        removeFromCart,
+        increaseAmount,
+        decreaseAmount,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
