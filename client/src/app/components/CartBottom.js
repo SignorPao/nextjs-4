@@ -23,7 +23,7 @@ Modal.setAppElement("body");
 import { CartContext } from "../context/CartContext";
 
 const CartBottom = () => {
-  const { setIsOpen, cart } = useContext(CartContext);
+  const { setIsOpen, cart, cartTotal } = useContext(CartContext);
 
   // modal state
   const [modal, setModal] = useState(false);
@@ -45,7 +45,7 @@ const CartBottom = () => {
           {/* total price */}
           <div className="flex items-center justify-between mb-6 text-lg font-semibold font-robotoCondensed">
             <div>Total:</div>
-            <div>$100</div>
+            <div>${parseFloat(cartTotal).toFixed(2)}</div>
           </div>
           {/* btn */}
           <div className="flex flex-col gap-y-3">

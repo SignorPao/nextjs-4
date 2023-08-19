@@ -36,7 +36,7 @@ const CartItem = ({ pizza }) => {
             </div>
             {/* quantity */}
             <div className="flex items-center gap-x-1">
-              {/* decrease aamount */}
+              {/* decrease amount */}
               <div
                 onClick={() => decreaseAmount(pizza.id, pizza.price)}
                 className="w-[28px] h-[28px] text-white gradient rounded-full flex items-center justify-center cursor-pointer"
