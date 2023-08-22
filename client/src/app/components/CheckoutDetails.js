@@ -10,13 +10,13 @@ const CheckoutDetails = ({ setModal }) => {
   const { cart, setCart, cartTotal } = useContext(CartContext);
 
   return (
-    <div>
+    <div className="h-full">
       <div className="lg:gap-x-8 h-full lg:px-12 lg:py-8">
         {/* title */}
         <h2 className="mb-4 text-xl uppercase font-extrabold text-center lg:text-left pt-6 lg:pt-0">
           Shipping & checkout
         </h2>
-        <div className="h-[86vh] lg:h-[50vh] flex flex-col lg:flex-row lg:gap-x-4">
+        <div className="h-[90vh] lg:h-[50vh] flex flex-col gap-y-8 lg:gap-y-0 lg:flex-row lg:gap-x-4">
           {/* box 1 */}
           <div className="flex-1 h-full overflow-y-auto lg:overflow-visible py-4 px-8 lg:py-0 lg:px-0">
             {/* input wrapper */}
@@ -94,7 +94,7 @@ const CheckoutDetails = ({ setModal }) => {
 
           {/* box 2 */}
           <div className="flex-1 h-full lg:max-w-[40%] flex flex-col justify-between pt-3 px-8 lg:p-0">
-            <div className="border rounded-lg flex flex-col mb-4 p-4 h-[80%]">
+            <div className="border rounded-lg flex flex-col mb-4 p-4 h-[90%]">
               <h3 className="text-base font-extrabold uppercase mb-4 border-b pb-4">
                 Your order
               </h3>
