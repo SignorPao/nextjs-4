@@ -115,6 +115,7 @@ const CartProvider = ({ children }) => {
         setIsOpen,
         addToCart,
         cart,
+        setCart,
         removeFromCart,
         increaseAmount,
         decreaseAmount,
