@@ -59,7 +59,7 @@ const CheckoutDetails = ({ setModal }) => {
           <h2 className="mb-4 text-xl uppercase font-extrabold text-center lg:text-left pt-6 lg:pt-0">
             Shipping & checkout
           </h2>
-          <div className="h-[90vh] lg:h-[50vh] flex flex-col gap-y-8 lg:gap-y-0 lg:flex-row lg:gap-x-4">
+          <div className="h-[89vh] lg:h-[89%] flex flex-col gap-y-8 lg:gap-y-0 lg:flex-row lg:gap-x-4">
             {/* box 1 */}
             <div className="flex-1 h-full overflow-y-auto lg:overflow-visible py-4 px-8 lg:py-0 lg:px-0">
               {/* input wrapper */}
