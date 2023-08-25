@@ -12,6 +12,12 @@ import {
   FaPinterest,
 } from "react-icons/fa";
 
+const date = () => {
+  let date = 2021;
+  let current = new Date().getFullYear();
+  return date === current ? date : `${date} - ${current}`;
+};
+
 const Footer = () => {
   return (
     <footer className="bg-primary bg-pattern py-16">
@@ -38,7 +44,18 @@ const Footer = () => {
           </div>
           {/* copyright */}
           <div className="text-white font-medium">
-            Copyright &copy; Pizzaland 2023. All rights reserved.
+            Copyright &copy; Pizzaland {date()}. All rights reserved.
+          </div>
+          <div className="text-sm text-white/80 font-light">
+            Powered by{" "}
+            <a
+              href="https://pavelbelousov.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white hover:underline transition-all ease-linear"
+            >
+              @signorPao
+            </a>
           </div>
         </div>
       </div>
