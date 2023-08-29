@@ -142,7 +142,7 @@ const CheckoutDetails = ({ setModal }) => {
                   Your order
                 </h3>
                 {/* items */}
-                <div className="overflow-y-scroll overflow-hidden scrollbar-thin scrollbar-thumb-secondary scrollbar-track-white  font-semibold flex flex-col gap-y-4 flex-1 max-h-[20vh] overflow-auto lg:max-h-full py-2 pr-2">
+                <div className="overflow-y-scroll overflow-hidden scrollbar-thin scrollbar-thumb-secondary scrollbar-track-white  font-semibold flex flex-col gap-y-4 flex-1 max-h-[20vh] lg:max-h-full py-2 pr-2">
                   {cart.map((pizza, index) => {
                     return (
                       <div

@@ -29,30 +29,30 @@ const Footer = () => {
           </Link>
           {/* social icons */}
           <div className="flex gap-x-6 text-xl lg:text-2xl text-white">
-            <Link href={"#"}>
+            <Link href={"#"} className="hover:text-secondary transition-all duration-200">
               <FaYoutube />
             </Link>
-            <Link href={"#"}>
+            <Link href={"#"} className="hover:text-secondary transition-all duration-200">
               <FaFacebook />
             </Link>
-            <Link href={"#"}>
+            <Link href={"#"} className="hover:text-secondary transition-all duration-200">
               <FaInstagram />
             </Link>
-            <Link href={"#"}>
+            <Link href={"#"} className="hover:text-secondary transition-all duration-200">
               <FaPinterest />
             </Link>
           </div>
           {/* copyright */}
-          <div className="text-white font-medium">
+          <div className="text-white font-medium text-center">
             Copyright &copy; Pizzaland {date()}. All rights reserved.
           </div>
-          <div className="text-sm text-white/80 font-light">
+          <div className="text-sm text-white/70 font-light">
             Powered by{" "}
             <a
               href="https://pavelbelousov.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white hover:underline transition-all ease-linear"
+              className="hover:text-white hover:underline transition-all ease-linear font-medium"
             >
               @signorPao
             </a>

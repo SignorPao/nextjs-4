@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply text-black;
+    @apply text-black scrollbar-thin scrollbar-thumb-secondary scrollbar-track-black/10;
   }
   .btn {
     @apply rounded-xl font-semibold transition-all;

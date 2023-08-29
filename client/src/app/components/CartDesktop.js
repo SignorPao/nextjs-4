@@ -23,9 +23,9 @@ const CartDesktop = () => {
       <CartTop />
       {/* item list */}
       <div
-        className={`px-10 flex-1 flex flex-col gap-y-4 h-[65vh] py-2 mr-4 mt-8 overflow-y-scroll scrollbar-thin ${
+        className={`px-10 flex-1 flex flex-col gap-y-4 h-[65vh] py-2 mr-4 mt-8 ${
           cart.length >= 3 &&
-          "scrollbar-track-black/10 scrollbar-thumb-secondary"
+          "overflow-y-scroll scrollbar-thin scrollbar-track-black/10 scrollbar-thumb-secondary"
         }`}
       >
         {cart.map((pizza, index) => {

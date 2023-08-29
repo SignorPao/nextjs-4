@@ -7,6 +7,7 @@ import CartMobileIcon from "./components/CartMobileIcon";
 import CartMobile from "./components/CartMobile";
 import CartDesktop from "./components/CartDesktop";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 // context
 import CartProvider from "./context/CartContext";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
           {children}
           <CartDesktop />
           <Footer />
+          <ScrollToTop />
         </body>
       </html>
     </CartProvider>
